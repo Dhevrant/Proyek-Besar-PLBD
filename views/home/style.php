@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#2b1a14;--muted:#765f55;--line:#e5e5e5;--bg:#fff;--soft:#fff6d6;
---red:#b71c1c;--red-dark:#7f0f0f;--yellow:#ffc21a;--orange:#ef6c00;--accent:var(--red);--danger:#9b1c1c;--ok:#1f6b3a;
+--red:#b71c1c;--red-dark:#7f0f0f;--yellow:#ffc21a;--orange:#ef6c00;--accent:var(--red);--danger:#9b1c1c;--ok:#1f6b3a;--shadow:0 6px 20px rgba(0,0,0,.08);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -20,7 +20,7 @@ h1,h2{color:var(--red-dark)}
 
 /* nav */
 .nav{display:flex;align-items:center;gap:1.5rem;padding:.8rem max(1rem,calc((100% - 1068px)/2));background:var(--red);border-bottom:4px solid var(--yellow);flex-wrap:wrap;position:sticky;top:0;z-index:20;color:#fff}
-.logo{font-weight:800;text-decoration:none;padding:.4rem 1rem;border-radius:8px;background:var(--yellow);color:var(--red-dark)}
+.logo{font-weight:800;text-decoration:none;padding:.4rem 1rem;border-radius:999px;background:var(--yellow);color:var(--red-dark)}
 .nav nav{display:flex;gap:1.3rem;flex:1;flex-wrap:wrap}
 .nav nav a{text-decoration:none;color:#ffe9e0;font-weight:500;border-bottom:3px solid transparent}
 .nav nav a:hover,.nav nav a.on{color:var(--yellow);border-bottom-color:var(--yellow)}
@@ -28,7 +28,7 @@ h1,h2{color:var(--red-dark)}
 .nav .btn-dark{background:var(--yellow);border-color:var(--yellow);color:var(--red-dark)}
 
 /* buttons & forms */
-.btn{display:inline-block;padding:.55rem 1.2rem;border:2px solid var(--red);border-radius:8px;background:#fff;color:var(--red);text-decoration:none;text-align:center;cursor:pointer;font:inherit;font-weight:600}
+.btn{display:inline-block;padding:.55rem 1.2rem;border:2px solid var(--red);border-radius:999px;background:#fff;color:var(--red);text-decoration:none;text-align:center;cursor:pointer;font:inherit;font-weight:600}
 .btn:hover{filter:brightness(.95)}
 .btn-dark{background:var(--accent);color:#fff}
 .btn-sm{padding:.2rem .8rem;font-size:.85rem}
@@ -44,13 +44,13 @@ label{display:block;font-weight:600;margin:.8rem 0 .25rem}
 .hp{position:absolute;left:-9999px}
 
 /* cards */
-.card{border:1px solid var(--line);border-radius:10px;padding:1.1rem;background:#fff}
+.card{border:1px solid var(--line);border-radius:16px;padding:1.1rem;background:#fff;box-shadow:var(--shadow)}
 .grid{display:grid;gap:1.1rem}
 .g4{grid-template-columns:repeat(4,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g2{grid-template-columns:1fr 1fr}
 .g4>.card:not(.menu-card):not(.stat){border-top:5px solid var(--yellow)}
-.ph{background:var(--soft);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--red-dark);aspect-ratio:4/3}
+.ph{background:var(--soft);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red-dark);aspect-ratio:4/3}
 .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
 .menu-card{display:flex;flex-direction:column;text-align:center}
 .menu-card h3{font-size:1.05rem;margin:.7rem 0 .2rem}
@@ -59,7 +59,7 @@ label{display:block;font-weight:600;margin:.8rem 0 .25rem}
 .st-ok{color:var(--ok);font-size:.85rem;font-weight:600}.st-no{color:var(--danger);font-size:.85rem;font-weight:600}
 
 /* hero */
-.hero{position:relative;background:var(--red);border-radius:10px;min-height:360px;overflow:hidden}
+.hero{position:relative;background:var(--red);border-radius:20px;min-height:360px;overflow:hidden;box-shadow:var(--shadow)}
 .slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.5rem 1.5rem 2.5rem;color:#fff;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
 .slide.on{opacity:1;visibility:visible}
 .slide h1{font-size:2.4rem;font-weight:800;color:#fff;max-width:760px}
@@ -68,7 +68,7 @@ label{display:block;font-weight:600;margin:.8rem 0 .25rem}
 .slide .btn-dark{background:var(--yellow);border-color:var(--yellow);color:var(--red-dark)}
 .dots{position:absolute;bottom:.9rem;width:100%;text-align:center}
 .dot{display:inline-block;width:10px;height:10px;border-radius:99px;margin:0 3px;background:rgba(255,255,255,.5)}
-.dot.on{background:var(--yellow)}
+.dot.on{width:28px;background:var(--yellow)}
 
 /* map, tables, pills, alerts */
 .map{border:4px solid var(--yellow);border-radius:10px;min-height:240px;background:#fff1cc;overflow:hidden}
@@ -77,7 +77,7 @@ table{width:100%;border-collapse:collapse}
 th,td{text-align:left;padding:.65rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
 th{background:var(--soft);color:var(--red-dark)}
 .table-wrap{overflow-x:auto}
-.pill{display:inline-block;border:1px solid var(--red);border-radius:8px;padding:.15rem .8rem;font-size:.85rem;text-decoration:none;color:var(--red);background:#fff}
+.pill{display:inline-block;border:1px solid var(--red);border-radius:999px;padding:.15rem .8rem;font-size:.85rem;text-decoration:none;color:var(--red);background:#fff}
 .pill.on{background:var(--red);color:#fff}
 .filters{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
 .filters form{flex:1;min-width:200px}
@@ -89,7 +89,7 @@ th{background:var(--soft);color:var(--red-dark)}
 .pager .on{background:var(--red);color:#fff}.pager .dis{opacity:.35}
 
 /* FAQ */
-details.faq{background:#fff;border:1px solid var(--line);border-left:6px solid var(--yellow);border-radius:12px;padding:.85rem 1rem;margin-bottom:.7rem}
+details.faq{background:#fff;border:1px solid var(--line);border-left:6px solid var(--yellow);border-radius:12px;padding:.85rem 1rem;margin-bottom:.7rem;box-shadow:var(--shadow)}
 details.faq[open]{border-left-color:var(--red)}
 details.faq summary{font-weight:600;cursor:pointer}
 details.faq p{margin:.6rem 0 0}
@@ -108,7 +108,7 @@ details.faq p{margin:.6rem 0 0}
 .footer .muted{color:#f3d2c8}
 .footer a{display:block;text-decoration:none;color:#f3d2c8}
 .footer a:hover{color:var(--yellow)}
-.wa-float{position:fixed;right:16px;bottom:16px;z-index:30}
+.wa-float{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:var(--shadow)}
 .btn-dark.wa-float{background:#128c4a;border-color:#fff;color:#fff}
 
 /* admin */
